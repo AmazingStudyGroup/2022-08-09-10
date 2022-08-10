@@ -200,9 +200,7 @@ BEGIN
 
 EXCEPTION
   WHEN OTHERS THEN
-    DBMS_OUTPUT.PUT_LINE('오류가 발생하였습니다.[' || TO_CHAR(SYSDATE,'""YYYY"년 "MM"월 "DD"일"') 
-                                              || TO_CHAR(SYSDATE,'""HH24"시 "MI"분 "SS"초"') 
-                                              || ']' );
+    DBMS_OUTPUT.PUT_LINE('오류가 발생하였습니다.' || TO_CHAR(SYSDATE,'[YYYY"년"MM"월"DD"일" HH24"시"mm"분"SS"초"]');
     DBMS_OUTPUT.PUT_LINE('SQLCODE : ' || TO_CHAR(SQLCODE));
     DBMS_OUTPUT.PUT_LINE('SQLERRM : ' || SQLERRM);
     
